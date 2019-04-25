@@ -8,9 +8,9 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class ConnectedSorterComponent implements OnInit {
 
-  todo = Array.from({ length: 5 }).map((_, i) => {
+  todo = Array.from({ length: 10 }).map((_, i) => {
     return {
-      test: `Item #${i}`,
+      test: `Item #${i+10}`,
       imageUrl: `../../../assets/contact-us.png`
 
 
