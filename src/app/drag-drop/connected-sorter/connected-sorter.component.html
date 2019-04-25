@@ -56,3 +56,30 @@
     </div>
   </div>
 </div>
+
+<div cdkDropList cdkDropListOrientation="horizontal" class="example-list2"
+  (cdkDropListDropped)="dropHorizontal($event)">
+  <div class="example-box2" *ngFor="let timePeriod of timePeriods" cdkDrag>{{timePeriod}}</div>
+</div>
+
+<div class="example-container">
+  <h2>Pool</h2>
+  <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]"
+    class="example-list" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let item of todo" cdkDrag>
+      {{item.test}}
+      <img [src]="item.imageUrl" width="20" height="20" />
+    </div>
+  </div>
+</div>
+
+
+
+  <h2>Signage</h2>
+  <div cdkDropList cdkDropListOrientation="horizontal" #doneList="cdkDropList" [cdkDropListData]="done"
+    [cdkDropListConnectedTo]="[todoList]" class="example-list2" (cdkDropListDropped)="drop($event)">
+    <div class="example-box2" *ngFor="let item of done" cdkDrag>
+      {{item.test}}
+      <img [src]="item.imageUrl" width="20" height="20" />
+    </div>
+  </div>

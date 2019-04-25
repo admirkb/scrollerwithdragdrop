@@ -8,6 +8,15 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class ConnectedSorterComponent implements OnInit {
 
+
+  timePeriods = [
+    'Bronze age',
+    'Iron age',
+    'Middle ages',
+    'Early modern period',
+    'Long nineteenth century'
+  ];
+
   todo = Array.from({ length: 10 }).map((_, i) => {
     return {
       test: `Item #${i+10}`,
@@ -69,5 +78,9 @@ export class ConnectedSorterComponent implements OnInit {
 
       console.log("transferArrayItem", this.done)
     }
+  }
+
+  dropHorizontal(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.timePeriods, event.previousIndex, event.currentIndex);
   }
 }
