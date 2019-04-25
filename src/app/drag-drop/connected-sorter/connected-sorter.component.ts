@@ -8,7 +8,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 })
 export class ConnectedSorterComponent implements OnInit {
 
-  todo = Array.from({ length: 10 }).map((_, i) => {
+  todo = Array.from({ length: 5 }).map((_, i) => {
     return {
       test: `Item #${i}`,
       imageUrl: `../../../assets/contact-us.png`
@@ -18,7 +18,7 @@ export class ConnectedSorterComponent implements OnInit {
   });
 
 
-  done = Array.from({ length: 4 }).map((_, i) => {
+  done = Array.from({ length: 5 }).map((_, i) => {
     return {
       test: `Item #${i}`,
       imageUrl: `../../../assets/contact-us.png`
@@ -26,6 +26,15 @@ export class ConnectedSorterComponent implements OnInit {
 
     };
   });
+
+  // items = Array.from({ length: 100000 }).map((_, i) => {
+  //   return {
+  //     test: `Item #${i}`,
+  //     imageUrl: `../../../assets/contact-us.png`
+
+
+  //   };
+  // });
 
   // todo = [
   //   'Get to work',
@@ -51,14 +60,14 @@ export class ConnectedSorterComponent implements OnInit {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
 
-      console.log(this.done)
+      console.log("moveItemInArray", this.done)
     } else {
       transferArrayItem(event.previousContainer.data,
         event.container.data,
         event.previousIndex,
         event.currentIndex);
 
-      console.log(this.done)
+      console.log("transferArrayItem", this.done)
     }
   }
 }
