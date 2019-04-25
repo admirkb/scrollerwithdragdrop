@@ -9,11 +9,11 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 export class ScrollerComponent implements OnInit {
   items = Array.from({ length: 100000 }).map((_, i) => {
     return {
-       test: `Item #${i}` ,
-       imageUrl: `Item #${i}` 
-       
-       
-       };
+      test: `Item #${i}`,
+      imageUrl: `../../../assets/contact-us.png`
+
+
+    };
   }
   );
 

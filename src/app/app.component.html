@@ -1,8 +1,24 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
 
 <app-scroller></app-scroller>
 <img src="../assets/contact-us.png" width="200" height="200"/>
 <app-scroller></app-scroller>
+
+<a routerLink="/dragdrop" routerLinkActive="active">Dragger
+
+</a>
+<a routerLink="/sorter" routerLinkActive="active">Sorter</a>
+
+<a routerLink="/connectedSorter" routerLinkActive="active">Connected Sorter
+
+</a>
+
+<a routerLink="/draggerHandleMe" routerLinkActive="active">Dragger With Handle</a>
+<a routerLink="/draggerCustomPreview" routerLinkActive="active">Dragger Custom Preview</a>
+<a routerLink="/draggerCustomPlaceholder" routerLinkActive="active">Dragger Custom Placeholder</a>
+<a routerLink="/sorterHorizontal" routerLinkActive="active">Sorter Horizontal</a>
+<a routerLink="/draggerDialog" routerLinkActive="active">Dragger Dialog</a>
+
+
+
+<br/>
+<router-outlet></router-outlet>
